@@ -9,7 +9,11 @@
 </head>
 <body>
 <div class="container">
-<div ng-controller="EventController"></div>
+<div ng-controller="EventController">
+    {{event.name}}<br>
+    {{event.work}}<br>
+    {{event.location}}
+</div>
 </div>
 
 <script src="lib/jquery.min.js"></script>
@@ -17,6 +21,7 @@
     <script src="lib/bootstrap.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers/EventController.js"></script>
 
 </body>
 </html>
