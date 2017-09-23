@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/app.css">
 
 </head>
-<body>
+<body ng-cloak="">
 <div class="container">
     <div class="navbar">
         <div class="navbar-inner">
@@ -20,12 +20,13 @@
     <div class="row">
         <img ng-src="{{event.imagePath}}" alt="{{event.name}}" style="padding-left: 10px; padding-right: 20px">
         <div class="spann11">
-            <h2>{{event.name}}</h2>
+            <h2 ng-style="mystyle" ng-bind="event.name"></h2>
         </div>
     </div>
+
     <div class="row">
         <div class="span3">
-            <div><strong>Date: </strong> {{event.date}}</div>
+            <div ng-class="myclass"><strong>Date: </strong> {{event.date}}</div> <br>
             <div> <strong>Time: </strong> {{event.time}}</div>
         </div>
         <div class="span4">
@@ -36,6 +37,22 @@
             </address>
         </div>
     </div>
+    <hr>
+    <div>
+        <h3 ng-bind-template="{{event.name}} {{event.date}}"></h3>
+
+        <button class="btn" ng-disabled="buttonDisable">Disabled</button>
+        <div>
+            {{1+4}}<br>
+            <p ng-non-bindable>{{1+4}}</p>
+        </div>
+        <div ng-bind-html-unsafe="snippet">some text</div>
+        <div ng-bind-html="snippet">some title</div>
+
+        <h2 ng-show="boolValue">Show this text</h2>
+        <h2 ng-hide="boolValue">Hide some text</h2>
+    </div>
+
    <hr>
     <h3>Sessions</h3>
     <ul class="thumbnails">
@@ -73,6 +90,7 @@
     <script src="lib/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/EventController.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
 
 </body>
 </html>

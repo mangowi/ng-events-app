@@ -2,6 +2,12 @@
  eventsApp.controller("EventController",
 
      function EventController($scope) {
+
+        $scope.snippet = '<span style="color: red;">hi there from ng-bind-html</span>';
+        $scope.boolValue = true;
+        $scope.mystyle = {color: "red"};
+        $scope.myclass = "blue";
+        $scope.buttonDisable = true;
         $scope.event = {
             name: "Daniel Mangowi AngularJS",
             location: {
@@ -10,7 +16,7 @@
                 postcode: "8000",
                 province: "Central Denmark"
             },
-            date: "10/09/2017 developer",
+            date: "10/09/2017",
             time: '10:45 pm',
             imagePath: 'img/angularjs-logo.png',
             sessions: [
