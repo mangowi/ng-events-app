@@ -8,7 +8,10 @@
         $scope.mystyle = {color: "red"};
         $scope.myclass = "blue";
         $scope.buttonDisable = true;
-        $scope.event = {
+        $scope.sortOrder = "name";
+         $scope.sortOrder = "-upVoteEvent";
+
+         $scope.event = {
             name: "Daniel Mangowi AngularJS",
             location: {
                 address: "VIA Kamt",
@@ -19,6 +22,14 @@
             date: "10/09/2017",
             time: '10:45 pm',
             imagePath: 'img/angularjs-logo.png',
+             jsonfiltered:{
+                 name: "Intro to AngularJS",
+                 creatorName: "Daniel Mangowi",
+                 level: "Beginner",
+                 duration: '1 hour',
+                 abstract: 'You will learn about angular how bla bla',
+                 upVoteEvent: 0
+             },
             sessions: [
                 {
                     name: "Intro to AngularJS",

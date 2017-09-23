@@ -27,7 +27,7 @@
     <div class="row">
         <div class="span3">
             <div ng-class="myclass"><strong>Date: </strong> {{event.date}}</div> <br>
-            <div> <strong>Time: </strong> {{event.time}}</div>
+            <div> <strong>Time: </strong> {{event.time | uppercase}}</div>
         </div>
         <div class="span4">
             <address>
@@ -43,7 +43,13 @@
 
         <button class="btn" ng-disabled="buttonDisable">Disabled</button>
         <div>
-            {{1+4}}<br>
+            {{1+994.234344444444444}}<br>
+             <p>Filtered by number:3</p>
+          <div> {{1+994.234344444444444 |number:3}}</div>
+            <p>Json filter</p>
+            <div>{{ event.jsonfiltered | json }}</div>
+
+            <div><strong></strong>{{ 600 | currency}}</div><br>
             <p ng-non-bindable>{{1+4}}</p>
         </div>
         <div ng-bind-html-unsafe="snippet">some text</div>
@@ -55,8 +61,20 @@
 
    <hr>
     <h3>Sessions</h3>
+    Order By:
+    <select  ng-model="sortOrder" class="input-small">
+        <option selected value="name">Name</option>
+        <option  value="-upVoteEvent">Vote</option>
+    </select>
+    <select ng-model="query.level" class="input-medium">
+        <option selected value="">All</option>
+        <option selected value="beginner">Introduction</option>
+        <option selected value="intermediate">Intermediate</option>
+        <option selected value="advanced">Advanced</option>
+
+    </select>
     <ul class="thumbnails">
-        <li ng-repeat="session in event.sessions">
+        <li ng-repeat="session in event.sessions |orderBy:sortOrder | limitTo: 2 |filter:query">
 
             <div class="row session">
                 <div class="span0 well votingWidget">
