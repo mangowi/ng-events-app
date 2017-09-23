@@ -19,43 +19,61 @@
                     creatorName: "Daniel Mangowi",
                     level: "Beginner",
                     duration: '1 hour',
-                    abstract: 'You will learn about angular how bla bla'
+                    abstract: 'You will learn about angular how bla bla',
+                    upVoteEvent: 0
+
                 },
                 {
                     name: "Get work done",
                     creatorName: "Daniel Mangowi",
                     level: "Intermediate",
                     duration: '45 hour',
-                    abstract: 'We get into a project and we will learn about angular how bla bla'
+                    abstract: 'We get into a project and we will learn about angular how bla bla',
+                    upVoteEvent: 0
+
                 },
                 {
                     name: "Directives Master",
                     creatorName: "Daniel Mangowi",
                     level: "Advanced",
                     duration: '1 hour',
-                    abstract: 'You will learn about angular how bla bla'
+                    abstract: 'You will learn about angular how bla bla',
+                    upVoteEvent: 0
+
                 },
                 {
                     name: "AngularJS or React",
                     creatorName: "Daniel Mangowi",
                     level: "ALL",
                     duration: '1 hour',
-                    abstract: 'We wil explore more into history'
+                    abstract: 'We wil explore more into history',
+                    upVoteEvent: 0
+
                 },
                 {
                     name: "Scope is always there",
                     creatorName: "Daniel Mangowi",
                     level: "Advanced",
                     duration: '1 hour',
-                    abstract: 'We will look  on how scope work and see what you can do with'
+                    abstract: 'We will look  on how scope work and see what you can do with',
+                    upVoteEvent: 0
+
                 },
                 {
                     name: "YGNT",
                     creatorName: "Daniel Mangowi",
                     level: "Beginner",
                     duration: '12 hour',
-                    abstract: 'You are not going to need it'
+                    abstract: 'You are not going to need it',
+                    upVoteEvent: 0
                 }
             ]
         };
+
+        $scope.upVoteSession = function (session) {
+            session.upVoteEvent++;
+        };
+         $scope.downVoteSession = function (session) {
+             session.upVoteEvent--;
+         };
 });
