@@ -1,14 +1,14 @@
-# Angular Event Registration — Demo Application for Angular JS
-
+# Angular Event Registration
 This project is a sample application demonstrating a more fully developed realistic single page
-angular application.
+angular 1.4.0  application.
 
 ### Server
 
-Two Servers are provided, an ASP.NET MVC server, and a node server. If using the ASP.NET server, simply start it up in IIS. If using the node server, from the command line run "npm install" and then either "server.sh" if you are on a linux box or "server.bat" if you are on a windows box.
+This app uses IIS Server but you can also use express js
 
-### Running the application
+### Running the application using IIS
+Add site to the IIS Manager
+ Go to this url to check if your server is working
+`'http://localhost:8800/img/angularjs-logo.png`
 
-Navigate your browser to `http://localhost:8000/` to see the app running in your browser. You may have to add the page to the url such as EventDetails.html depending on where you are at in the course. The port may be configured either in the node server or on IIS.
-
-
+You may see Angular image, that means you have configure your server well.
